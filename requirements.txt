@@ -1,0 +1,2 @@
+# Runtime dependency for the public core package.
+requests==2.32.5

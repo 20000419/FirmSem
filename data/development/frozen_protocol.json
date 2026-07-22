@@ -1,0 +1,16 @@
+{
+  "dataset": "public_v4_obligation_level_131_2plus1",
+  "audit_unit": "one selected (function, obligation) pair",
+  "input_path": "real_world_eval\\results\\public_guard_survival_benchmark_v4_reviewed133_obligation_aligned.json",
+  "input_sha256": "1a6b82a5c262583f1a0f976e73aead3ef316bb0297ebcc4b863bfe2db4662c28",
+  "runtime_rows": 131,
+  "labels": [
+    "CHECK_ELIMINATED",
+    "CHECK_PRESENT",
+    "AMBIGUOUS"
+  ],
+  "phase1": "two independent annotators label all 131 obligations",
+  "phase2": "Cohen's kappa is computed before adjudication",
+  "phase3": "a third adjudicator resolves only A/B disagreements",
+  "gold_exposure": "prior labels and author alignment notes are coordinator-only"
+}

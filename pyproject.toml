@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "firmsem"
+version = "1.0.0"
+description = "Security-guard survival analysis for compiler-optimized binaries"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [
+  {name = "Zhenyu Liu", email = "lzy00419@163.com"},
+]
+dependencies = ["requests==2.32.5"]
+
+[project.urls]
+Repository = "https://github.com/20000419/FirmSem"
+Archive = "https://doi.org/10.5281/zenodo.21485535"
+
+[tool.setuptools]
+packages = ["firmsem"]

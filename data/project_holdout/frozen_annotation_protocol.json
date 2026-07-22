@@ -1,0 +1,17 @@
+{
+  "protocol_id": "firmsem_untouched_project_holdout_v1_2plus1",
+  "input_path": "real_world_eval\\results\\untouched_project_holdout_v1\\selected_obligations_unlabeled.json",
+  "input_sha256": "9f8005923164763511768666237a74c67b99345f99ca211e36b7695ce8ff7951",
+  "rows": 100,
+  "projects": [
+    "cjson",
+    "libexpat",
+    "libtomcrypt",
+    "libyaml",
+    "zlib"
+  ],
+  "phase1": "two independent annotators label eligibility and survival for all rows",
+  "phase2": "joint-label Cohen's kappa before adjudication",
+  "phase3": "third adjudicator resolves all joint-label disagreements",
+  "gold_exposure": "no gold exists before this round; model outputs are prohibited"
+}

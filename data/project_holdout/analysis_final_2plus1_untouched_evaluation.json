@@ -1,0 +1,367 @@
+{
+  "status": "complete",
+  "annotation": {
+    "obligation_131": {
+      "rows": 131,
+      "phase1_agreement": {
+        "rows": 131,
+        "agreements": 124,
+        "disagreements": 7,
+        "agreement_rate": 0.9465648854961832,
+        "cohens_kappa": 0.8888215324927256,
+        "bootstrap_replicates": 10000,
+        "bootstrap_defined": 10000,
+        "bootstrap_seed": 2026071803,
+        "ci_95": [
+          0.8050572913258294,
+          0.9555443677018881
+        ],
+        "annotator_a_marginals": {
+          "CHECK_ELIMINATED": 43,
+          "CHECK_PRESENT": 82,
+          "AMBIGUOUS": 6
+        },
+        "annotator_b_marginals": {
+          "CHECK_ELIMINATED": 43,
+          "CHECK_PRESENT": 86,
+          "AMBIGUOUS": 2
+        }
+      },
+      "adjudicated_rows": 7,
+      "final_label_counts": {
+        "CHECK_ELIMINATED": 42,
+        "CHECK_PRESENT": 87,
+        "AMBIGUOUS": 2
+      },
+      "changed_vs_prior_author_alignment": 2,
+      "annotation_unit": "function_obligation",
+      "status": "complete_obligation_level_2plus1"
+    },
+    "untouched_100": {
+      "input_rows": 100,
+      "scored_rows": 37,
+      "excluded_rows": 63,
+      "ambiguous_eligibility_rows": 0,
+      "ambiguous_survival_rows": 0,
+      "label_counts": {
+        "CHECK_PRESENT": 32,
+        "CHECK_ELIMINATED": 5
+      },
+      "impact_counts": {
+        "MEMORY_SAFETY": 23,
+        "INTEGER_SIZE_SAFETY": 8,
+        "CRYPTO_PRECONDITION": 1,
+        "RESOURCE_STATE_SAFETY": 2,
+        "PARSER_INTEGRITY": 3
+      },
+      "adjudicated_rows": 32,
+      "phase1_agreement": {
+        "rows": 100,
+        "agreements": 74,
+        "disagreements": 26,
+        "agreement_rate": 0.74,
+        "cohens_kappa_joint_label": 0.533715925394548,
+        "bootstrap_replicates": 10000,
+        "bootstrap_defined": 10000,
+        "ci_95": [
+          0.3717815681351278,
+          0.6819809463514759
+        ],
+        "a_marginals": {
+          "EXCLUDE_NON_SECURITY_OR_NON_RUNTIME": 45,
+          "ELIGIBLE:CHECK_PRESENT": 48,
+          "ELIGIBLE:CHECK_ELIMINATED": 7
+        },
+        "b_marginals": {
+          "EXCLUDE_NON_SECURITY_OR_NON_RUNTIME": 57,
+          "ELIGIBLE:CHECK_PRESENT": 38,
+          "ELIGIBLE:CHECK_ELIMINATED": 5
+        }
+      }
+    },
+    "untouched_jointly_eligible_survival": {
+      "rows": 36,
+      "agreements": 36,
+      "agreement_rate": 1.0,
+      "cohens_kappa": 1.0,
+      "label_pairs": {
+        "CHECK_ELIMINATED|CHECK_ELIMINATED": 5,
+        "CHECK_PRESENT|CHECK_PRESENT": 31
+      }
+    }
+  },
+  "frozen_split": {
+    "training_rows": 129,
+    "training_labels": {
+      "CHECK_ELIMINATED": 42,
+      "CHECK_PRESENT": 87
+    },
+    "training_projects": 49,
+    "testing_rows": 37,
+    "testing_labels": {
+      "CHECK_PRESENT": 32,
+      "CHECK_ELIMINATED": 5
+    },
+    "testing_projects": [
+      "cjson",
+      "libexpat",
+      "libtomcrypt",
+      "libyaml",
+      "zlib"
+    ],
+    "project_overlap": []
+  },
+  "holdout_composition": {
+    "guard_class_by_label": {
+      "assert_preconditions|CHECK_ELIMINATED": 5,
+      "helper_return_checks|CHECK_PRESENT": 6,
+      "nonnull_preconditions|CHECK_PRESENT": 10,
+      "overflow_checks|CHECK_PRESENT": 3,
+      "parser_integrity_checks|CHECK_PRESENT": 3,
+      "range_and_bounds_preconditions|CHECK_PRESENT": 8,
+      "validate_macro_preconditions|CHECK_PRESENT": 2
+    },
+    "positive_projects": {
+      "libyaml": 3,
+      "libexpat": 2
+    },
+    "positive_guard_classes": {
+      "assert_preconditions": 5
+    },
+    "positive_mechanism_from_gold": "ASSERTION_POLICY for all five positives",
+    "post_hoc_assert_class_rule": {
+      "description": "Predict eliminated iff expected_guard_class == assert_preconditions",
+      "correct": 37,
+      "rows": 37,
+      "accuracy": 1.0,
+      "status": "diagnostic_only_not_preregistered"
+    }
+  },
+  "uncertainty": {
+    "positive_recall_5_of_5_wilson_95": [
+      0.5655,
+      1.0
+    ],
+    "negative_specificity_32_of_32_wilson_95": [
+      0.8928,
+      1.0
+    ],
+    "overall_accuracy_37_of_37_wilson_95": [
+      0.9059,
+      1.0
+    ],
+    "note": "Wilson intervals are reported because resampling five identical positive outcomes yields a misleading degenerate [1,1] bootstrap interval."
+  },
+  "non_llm_baselines": {
+    "typed_structural_matcher": {
+      "metrics": {
+        "TP": 4,
+        "FP": 16,
+        "FN": 1,
+        "TN": 16,
+        "precision": 0.2,
+        "recall": 0.8,
+        "f1": 0.32,
+        "accuracy": 0.5405,
+        "mcc": 0.2058,
+        "balanced_accuracy": 0.65
+      },
+      "stratified_bootstrap_f1_ci_95": [
+        0.1667,
+        0.4545
+      ]
+    },
+    "frozen_random_forest_source_only": {
+      "metrics": {
+        "TP": 3,
+        "FP": 1,
+        "FN": 2,
+        "TN": 31,
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1": 0.6667,
+        "accuracy": 0.9189,
+        "mcc": 0.6262,
+        "balanced_accuracy": 0.7844
+      },
+      "stratified_bootstrap_f1_ci_95": [
+        0.25,
+        1.0
+      ]
+    },
+    "frozen_xgboost_source_plus_assembly": {
+      "metrics": {
+        "TP": 4,
+        "FP": 2,
+        "FN": 1,
+        "TN": 30,
+        "precision": 0.6667,
+        "recall": 0.8,
+        "f1": 0.7273,
+        "accuracy": 0.9189,
+        "mcc": 0.684,
+        "balanced_accuracy": 0.8688
+      },
+      "stratified_bootstrap_f1_ci_95": [
+        0.4444,
+        1.0
+      ]
+    }
+  },
+  "llm_methods": {
+    "gpt54_source_assembly": {
+      "status": "completed",
+      "metrics": {
+        "TP": 5,
+        "FP": 0,
+        "FN": 0,
+        "TN": 32,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "mcc": 1.0,
+        "balanced_accuracy": 1.0,
+        "parsed_samples": 37
+      }
+    },
+    "gpt54_source_only": {
+      "status": "completed",
+      "metrics": {
+        "TP": 5,
+        "FP": 0,
+        "FN": 0,
+        "TN": 32,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "mcc": 1.0,
+        "balanced_accuracy": 1.0,
+        "parsed_samples": 37
+      }
+    },
+    "claude_source_assembly": {
+      "status": "completed",
+      "metrics": {
+        "TP": 5,
+        "FP": 0,
+        "FN": 0,
+        "TN": 32,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "mcc": 1.0,
+        "balanced_accuracy": 1.0,
+        "parsed_samples": 37
+      }
+    },
+    "claude_source_only": {
+      "status": "completed",
+      "metrics": {
+        "TP": 5,
+        "FP": 0,
+        "FN": 0,
+        "TN": 32,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "mcc": 1.0,
+        "balanced_accuracy": 1.0,
+        "parsed_samples": 37
+      }
+    },
+    "gpt54_strict": {
+      "status": "completed",
+      "metrics": {
+        "TP": 1,
+        "FP": 1,
+        "FN": 4,
+        "TN": 31,
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1": 0.2857,
+        "mcc": 0.2551,
+        "balanced_accuracy": 0.5844,
+        "parsed_samples": 37
+      }
+    },
+    "claude_strict": {
+      "status": "completed",
+      "metrics": {
+        "TP": 1,
+        "FP": 0,
+        "FN": 4,
+        "TN": 32,
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1": 0.3333,
+        "mcc": 0.4216,
+        "balanced_accuracy": 0.6,
+        "parsed_samples": 37
+      }
+    },
+    "claude_source_assembly_plus_gpt54_stage_b": {
+      "status": "completed",
+      "metrics": {
+        "TP": 4,
+        "FP": 0,
+        "FN": 1,
+        "TN": 32,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.8889,
+        "mcc": 0.8808,
+        "balanced_accuracy": 0.9,
+        "parsed_samples": 37
+      }
+    }
+  },
+  "source_only_ablation": {
+    "gpt54": {
+      "paired_rows": 37,
+      "identical_predictions": 37,
+      "changed_predictions": 0,
+      "corrected_by_assembly": 0,
+      "regressed_by_assembly": 0
+    },
+    "claude": {
+      "paired_rows": 37,
+      "identical_predictions": 37,
+      "changed_predictions": 0,
+      "corrected_by_assembly": 0,
+      "regressed_by_assembly": 0
+    }
+  },
+  "paired_tests": {
+    "gpt54_source_assembly_vs_typed_structural_matcher": {
+      "paired_rows": 37,
+      "reference_only_correct": 17,
+      "comparator_only_correct": 0,
+      "exact_mcnemar_two_sided_p": 1.526e-05
+    },
+    "gpt54_source_assembly_vs_frozen_random_forest_source_only": {
+      "paired_rows": 37,
+      "reference_only_correct": 3,
+      "comparator_only_correct": 0,
+      "exact_mcnemar_two_sided_p": 0.25
+    },
+    "gpt54_source_assembly_vs_frozen_xgboost_source_plus_assembly": {
+      "paired_rows": 37,
+      "reference_only_correct": 3,
+      "comparator_only_correct": 0,
+      "exact_mcnemar_two_sided_p": 0.25
+    }
+  },
+  "interpretation": {
+    "supported": [
+      "The independent 2+1 workflow produced frozen project-disjoint train and test gold.",
+      "On the 37 eligible obligations, source-aware GPT-5.4 and Claude made no errors.",
+      "A frozen typed structural matcher reached F1 0.3200, a frozen source-only random forest reached F1 0.6667, and a frozen source-plus-assembly XGBoost baseline reached F1 0.7273."
+    ],
+    "not_supported": [
+      "The perfect source-aware score does not establish that target assembly contributed: source-only prompts produced identical predictions.",
+      "The untouched holdout does not establish general optimizer-elimination detection: all five positives are assertion-policy losses and guard class perfectly separates labels.",
+      "Although the source-aware predictions significantly outperform the typed structural matcher, identical source-only predictions mean that difference cannot be attributed to target-assembly reasoning."
+    ],
+    "required_next_validation": "Add project-disjoint positives from non-assertion optimizer mechanisms and preserved assertion hard negatives, then repeat the frozen evaluation."
+  }
+}

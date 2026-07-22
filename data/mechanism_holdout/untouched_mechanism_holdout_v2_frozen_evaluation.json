@@ -1,0 +1,2408 @@
+{
+  "metadata": {
+    "dataset_sha256": "333acc67dad864ae54b2564a52d46bb68a2f1da97938aeffac259dc8a3b23458",
+    "pair_manifest_sha256": "65fc3624e80182eed9ce84e28453272f9b2a34851ab4541c92de8302a0b2da71",
+    "rows": 16,
+    "incident_clusters": 8,
+    "labels": {
+      "CHECK_ELIMINATED": 9,
+      "CHECK_PRESENT": 7
+    },
+    "strata": {
+      "frozen_primary": 8,
+      "post_freeze_crosscheck": 8
+    },
+    "bootstrap_unit": "incident_cluster",
+    "bootstrap_replicates": 10000,
+    "seed": 20260722,
+    "warning": "Paired challenge results do not estimate natural prevalence; report strata separately."
+  },
+  "methods": {
+    "GuardIR assembly-only": {
+      "metrics": {
+        "TP": 4,
+        "FP": 0,
+        "FN": 5,
+        "TN": 7,
+        "precision": 1.0,
+        "recall": 0.4444444444444444,
+        "f1": 0.6153846153846153,
+        "accuracy": 0.6875,
+        "mcc": 0.5091750772173156,
+        "balanced_accuracy": 0.7222222222222222
+      },
+      "incident_cluster_bootstrap_ci_95": {
+        "precision": [
+          1.0,
+          1.0
+        ],
+        "recall": [
+          0.1111111111111111,
+          0.875
+        ],
+        "f1": [
+          0.19999999999999998,
+          0.9333333333333333
+        ],
+        "mcc": [
+          0.2182178902359924,
+          0.8819171036881969
+        ],
+        "balanced_accuracy": [
+          0.5555555555555556,
+          0.9375
+        ]
+      },
+      "pair_metrics": {
+        "exact_pairs": 4,
+        "total_pairs": 8,
+        "exact_pair_accuracy": 0.5,
+        "mixed_gold_exact_pairs": 4,
+        "mixed_gold_pairs": 7,
+        "mixed_gold_exact_accuracy": 0.5714285714285714,
+        "prediction_change_pairs": 4,
+        "prediction_change_rate": 0.5,
+        "details": [
+          {
+            "incident_id": "crosscheck-incident-libtiff-cve-2019-14973",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-add100",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ext4shl",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ptr-2008-1685",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-1",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-12",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": false,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-3",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-9",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          }
+        ]
+      },
+      "by_stratum": {
+        "frozen_primary": {
+          "metrics": {
+            "TP": 1,
+            "FP": 0,
+            "FN": 4,
+            "TN": 3,
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.33333333333333337,
+            "accuracy": 0.5,
+            "mcc": 0.29277002188455997,
+            "balanced_accuracy": 0.6
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              0.0,
+              1.0
+            ],
+            "recall": [
+              0.0,
+              0.75
+            ],
+            "f1": [
+              0.0,
+              0.8571428571428571
+            ],
+            "mcc": [
+              0.0,
+              0.7745966692414834
+            ],
+            "balanced_accuracy": [
+              0.5,
+              0.875
+            ]
+          }
+        },
+        "post_freeze_crosscheck": {
+          "metrics": {
+            "TP": 3,
+            "FP": 0,
+            "FN": 1,
+            "TN": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "accuracy": 0.875,
+            "mcc": 0.7745966692414834,
+            "balanced_accuracy": 0.875
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              1.0,
+              1.0
+            ],
+            "recall": [
+              0.25,
+              1.0
+            ],
+            "f1": [
+              0.4,
+              1.0
+            ],
+            "mcc": [
+              0.3779644730092272,
+              1.0
+            ],
+            "balanced_accuracy": [
+              0.625,
+              1.0
+            ]
+          }
+        }
+      },
+      "errors": [
+        {
+          "id": "1",
+          "original_id": "umh2-4c0f046081fbc7",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "2",
+          "original_id": "umh2-4c94c4889714a8",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "4",
+          "original_id": "umh2-baf1bff81fb426",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "6",
+          "original_id": "umh2-d622c9e5d6b2e4",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "9",
+          "original_id": "umh2x-0fcad3f1b45e6",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        }
+      ]
+    },
+    "Typed source-assembly matcher": {
+      "metrics": {
+        "TP": 5,
+        "FP": 1,
+        "FN": 4,
+        "TN": 6,
+        "precision": 0.8333333333333334,
+        "recall": 0.5555555555555556,
+        "f1": 0.6666666666666667,
+        "accuracy": 0.6875,
+        "mcc": 0.42289003161103106,
+        "balanced_accuracy": 0.7063492063492063
+      },
+      "incident_cluster_bootstrap_ci_95": {
+        "precision": [
+          0.6,
+          1.0
+        ],
+        "recall": [
+          0.2,
+          0.875
+        ],
+        "f1": [
+          0.33333333333333337,
+          0.9333333333333333
+        ],
+        "mcc": [
+          0.0,
+          0.8819171036881969
+        ],
+        "balanced_accuracy": [
+          0.5,
+          0.9375
+        ]
+      },
+      "pair_metrics": {
+        "exact_pairs": 4,
+        "total_pairs": 8,
+        "exact_pair_accuracy": 0.5,
+        "mixed_gold_exact_pairs": 4,
+        "mixed_gold_pairs": 7,
+        "mixed_gold_exact_accuracy": 0.5714285714285714,
+        "prediction_change_pairs": 4,
+        "prediction_change_rate": 0.5,
+        "details": [
+          {
+            "incident_id": "crosscheck-incident-libtiff-cve-2019-14973",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-add100",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ext4shl",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ptr-2008-1685",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-1",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-12",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": false,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-3",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-9",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          }
+        ]
+      },
+      "by_stratum": {
+        "frozen_primary": {
+          "metrics": {
+            "TP": 2,
+            "FP": 1,
+            "FN": 3,
+            "TN": 2,
+            "precision": 0.6666666666666666,
+            "recall": 0.4,
+            "f1": 0.5,
+            "accuracy": 0.5,
+            "mcc": 0.06666666666666667,
+            "balanced_accuracy": 0.5333333333333333
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              0.0,
+              1.0
+            ],
+            "recall": [
+              0.0,
+              1.0
+            ],
+            "f1": [
+              0.0,
+              0.8571428571428571
+            ],
+            "mcc": [
+              -0.5773502691896258,
+              0.7745966692414834
+            ],
+            "balanced_accuracy": [
+              0.16666666666666666,
+              0.875
+            ]
+          }
+        },
+        "post_freeze_crosscheck": {
+          "metrics": {
+            "TP": 3,
+            "FP": 0,
+            "FN": 1,
+            "TN": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "accuracy": 0.875,
+            "mcc": 0.7745966692414834,
+            "balanced_accuracy": 0.875
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              1.0,
+              1.0
+            ],
+            "recall": [
+              0.25,
+              1.0
+            ],
+            "f1": [
+              0.4,
+              1.0
+            ],
+            "mcc": [
+              0.3779644730092272,
+              1.0
+            ],
+            "balanced_accuracy": [
+              0.625,
+              1.0
+            ]
+          }
+        }
+      },
+      "errors": [
+        {
+          "id": "1",
+          "original_id": "umh2-4c0f046081fbc7",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "4",
+          "original_id": "umh2-baf1bff81fb426",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "5",
+          "original_id": "umh2-bb2f22c1b2d5f1",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "6",
+          "original_id": "umh2-d622c9e5d6b2e4",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "9",
+          "original_id": "umh2x-0fcad3f1b45e6",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        }
+      ]
+    },
+    "GPT-5.4 strict": {
+      "metrics": {
+        "TP": 7,
+        "FP": 0,
+        "FN": 2,
+        "TN": 7,
+        "precision": 1.0,
+        "recall": 0.7777777777777778,
+        "f1": 0.8750000000000001,
+        "accuracy": 0.875,
+        "mcc": 0.7777777777777778,
+        "balanced_accuracy": 0.8888888888888888
+      },
+      "incident_cluster_bootstrap_ci_95": {
+        "precision": [
+          1.0,
+          1.0
+        ],
+        "recall": [
+          0.5454545454545454,
+          1.0
+        ],
+        "f1": [
+          0.7058823529411764,
+          1.0
+        ],
+        "mcc": [
+          0.5222329678670935,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.7727272727272727,
+          1.0
+        ]
+      },
+      "pair_metrics": {
+        "exact_pairs": 6,
+        "total_pairs": 8,
+        "exact_pair_accuracy": 0.75,
+        "mixed_gold_exact_pairs": 6,
+        "mixed_gold_pairs": 7,
+        "mixed_gold_exact_accuracy": 0.8571428571428571,
+        "prediction_change_pairs": 7,
+        "prediction_change_rate": 0.875,
+        "details": [
+          {
+            "incident_id": "crosscheck-incident-libtiff-cve-2019-14973",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-add100",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ext4shl",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ptr-2008-1685",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-1",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-12",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": false,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-3",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-9",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          }
+        ]
+      },
+      "by_stratum": {
+        "frozen_primary": {
+          "metrics": {
+            "TP": 3,
+            "FP": 0,
+            "FN": 2,
+            "TN": 3,
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.7499999999999999,
+            "accuracy": 0.75,
+            "mcc": 0.6,
+            "balanced_accuracy": 0.8
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              1.0,
+              1.0
+            ],
+            "recall": [
+              0.25,
+              1.0
+            ],
+            "f1": [
+              0.4,
+              1.0
+            ],
+            "mcc": [
+              0.29277002188455997,
+              1.0
+            ],
+            "balanced_accuracy": [
+              0.625,
+              1.0
+            ]
+          }
+        },
+        "post_freeze_crosscheck": {
+          "metrics": {
+            "TP": 4,
+            "FP": 0,
+            "FN": 0,
+            "TN": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "mcc": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              1.0,
+              1.0
+            ],
+            "recall": [
+              1.0,
+              1.0
+            ],
+            "f1": [
+              1.0,
+              1.0
+            ],
+            "mcc": [
+              1.0,
+              1.0
+            ],
+            "balanced_accuracy": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "errors": [
+        {
+          "id": "2",
+          "original_id": "umh2-4c94c4889714a8",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "4",
+          "original_id": "umh2-baf1bff81fb426",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        }
+      ],
+      "runtime": {
+        "calls": 16,
+        "mean_elapsed_seconds": 14.1961125,
+        "sum_elapsed_seconds": 227.1378,
+        "reported_total_cost_usd": null,
+        "reported_total_tokens": 47754
+      }
+    },
+    "Claude Opus 4.6 strict": {
+      "metrics": {
+        "TP": 9,
+        "FP": 0,
+        "FN": 0,
+        "TN": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "mcc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "incident_cluster_bootstrap_ci_95": {
+        "precision": [
+          1.0,
+          1.0
+        ],
+        "recall": [
+          1.0,
+          1.0
+        ],
+        "f1": [
+          1.0,
+          1.0
+        ],
+        "mcc": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          1.0,
+          1.0
+        ]
+      },
+      "pair_metrics": {
+        "exact_pairs": 8,
+        "total_pairs": 8,
+        "exact_pair_accuracy": 1.0,
+        "mixed_gold_exact_pairs": 7,
+        "mixed_gold_pairs": 7,
+        "mixed_gold_exact_accuracy": 1.0,
+        "prediction_change_pairs": 7,
+        "prediction_change_rate": 0.875,
+        "details": [
+          {
+            "incident_id": "crosscheck-incident-libtiff-cve-2019-14973",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-add100",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ext4shl",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ptr-2008-1685",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-1",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-12",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": false,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-3",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-9",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          }
+        ]
+      },
+      "by_stratum": {
+        "frozen_primary": {
+          "metrics": {
+            "TP": 5,
+            "FP": 0,
+            "FN": 0,
+            "TN": 3,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "mcc": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              1.0,
+              1.0
+            ],
+            "recall": [
+              1.0,
+              1.0
+            ],
+            "f1": [
+              1.0,
+              1.0
+            ],
+            "mcc": [
+              1.0,
+              1.0
+            ],
+            "balanced_accuracy": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "post_freeze_crosscheck": {
+          "metrics": {
+            "TP": 4,
+            "FP": 0,
+            "FN": 0,
+            "TN": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "mcc": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              1.0,
+              1.0
+            ],
+            "recall": [
+              1.0,
+              1.0
+            ],
+            "f1": [
+              1.0,
+              1.0
+            ],
+            "mcc": [
+              1.0,
+              1.0
+            ],
+            "balanced_accuracy": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "errors": [],
+      "runtime": {
+        "calls": 16,
+        "mean_elapsed_seconds": 9.2393,
+        "sum_elapsed_seconds": 147.8288,
+        "reported_total_cost_usd": 0.458195,
+        "reported_total_tokens": null
+      }
+    },
+    "GPT-5.4 source-aware": {
+      "metrics": {
+        "TP": 9,
+        "FP": 1,
+        "FN": 0,
+        "TN": 6,
+        "precision": 0.9,
+        "recall": 1.0,
+        "f1": 0.9473684210526316,
+        "accuracy": 0.9375,
+        "mcc": 0.8783100656536799,
+        "balanced_accuracy": 0.9285714285714286
+      },
+      "incident_cluster_bootstrap_ci_95": {
+        "precision": [
+          0.7272727272727273,
+          1.0
+        ],
+        "recall": [
+          1.0,
+          1.0
+        ],
+        "f1": [
+          0.8421052631578948,
+          1.0
+        ],
+        "mcc": [
+          0.6546536707079771,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.7857142857142857,
+          1.0
+        ]
+      },
+      "pair_metrics": {
+        "exact_pairs": 7,
+        "total_pairs": 8,
+        "exact_pair_accuracy": 0.875,
+        "mixed_gold_exact_pairs": 6,
+        "mixed_gold_pairs": 7,
+        "mixed_gold_exact_accuracy": 0.8571428571428571,
+        "prediction_change_pairs": 6,
+        "prediction_change_rate": 0.75,
+        "details": [
+          {
+            "incident_id": "crosscheck-incident-libtiff-cve-2019-14973",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-add100",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ext4shl",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ptr-2008-1685",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-1",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-12",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": false,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-3",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-9",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          }
+        ]
+      },
+      "by_stratum": {
+        "frozen_primary": {
+          "metrics": {
+            "TP": 5,
+            "FP": 0,
+            "FN": 0,
+            "TN": 3,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "mcc": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              1.0,
+              1.0
+            ],
+            "recall": [
+              1.0,
+              1.0
+            ],
+            "f1": [
+              1.0,
+              1.0
+            ],
+            "mcc": [
+              1.0,
+              1.0
+            ],
+            "balanced_accuracy": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "post_freeze_crosscheck": {
+          "metrics": {
+            "TP": 4,
+            "FP": 1,
+            "FN": 0,
+            "TN": 3,
+            "precision": 0.8,
+            "recall": 1.0,
+            "f1": 0.888888888888889,
+            "accuracy": 0.875,
+            "mcc": 0.7745966692414834,
+            "balanced_accuracy": 0.875
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              0.5714285714285714,
+              1.0
+            ],
+            "recall": [
+              1.0,
+              1.0
+            ],
+            "f1": [
+              0.7272727272727273,
+              1.0
+            ],
+            "mcc": [
+              0.3779644730092272,
+              1.0
+            ],
+            "balanced_accuracy": [
+              0.625,
+              1.0
+            ]
+          }
+        }
+      },
+      "errors": [
+        {
+          "id": "14",
+          "original_id": "umh2x-938db1c3bfee4",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        }
+      ],
+      "runtime": {
+        "calls": 16,
+        "mean_elapsed_seconds": 14.392325,
+        "sum_elapsed_seconds": 230.2772,
+        "reported_total_cost_usd": null,
+        "reported_total_tokens": 141300
+      }
+    },
+    "Claude Opus 4.6 source-aware": {
+      "metrics": {
+        "TP": 9,
+        "FP": 1,
+        "FN": 0,
+        "TN": 6,
+        "precision": 0.9,
+        "recall": 1.0,
+        "f1": 0.9473684210526316,
+        "accuracy": 0.9375,
+        "mcc": 0.8783100656536799,
+        "balanced_accuracy": 0.9285714285714286
+      },
+      "incident_cluster_bootstrap_ci_95": {
+        "precision": [
+          0.7272727272727273,
+          1.0
+        ],
+        "recall": [
+          1.0,
+          1.0
+        ],
+        "f1": [
+          0.8421052631578948,
+          1.0
+        ],
+        "mcc": [
+          0.6546536707079771,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.7857142857142857,
+          1.0
+        ]
+      },
+      "pair_metrics": {
+        "exact_pairs": 7,
+        "total_pairs": 8,
+        "exact_pair_accuracy": 0.875,
+        "mixed_gold_exact_pairs": 6,
+        "mixed_gold_pairs": 7,
+        "mixed_gold_exact_accuracy": 0.8571428571428571,
+        "prediction_change_pairs": 6,
+        "prediction_change_rate": 0.75,
+        "details": [
+          {
+            "incident_id": "crosscheck-incident-libtiff-cve-2019-14973",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-add100",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ext4shl",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ptr-2008-1685",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-1",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-12",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": false,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-3",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-9",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          }
+        ]
+      },
+      "by_stratum": {
+        "frozen_primary": {
+          "metrics": {
+            "TP": 5,
+            "FP": 0,
+            "FN": 0,
+            "TN": 3,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "mcc": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              1.0,
+              1.0
+            ],
+            "recall": [
+              1.0,
+              1.0
+            ],
+            "f1": [
+              1.0,
+              1.0
+            ],
+            "mcc": [
+              1.0,
+              1.0
+            ],
+            "balanced_accuracy": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "post_freeze_crosscheck": {
+          "metrics": {
+            "TP": 4,
+            "FP": 1,
+            "FN": 0,
+            "TN": 3,
+            "precision": 0.8,
+            "recall": 1.0,
+            "f1": 0.888888888888889,
+            "accuracy": 0.875,
+            "mcc": 0.7745966692414834,
+            "balanced_accuracy": 0.875
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              0.5714285714285714,
+              1.0
+            ],
+            "recall": [
+              1.0,
+              1.0
+            ],
+            "f1": [
+              0.7272727272727273,
+              1.0
+            ],
+            "mcc": [
+              0.3779644730092272,
+              1.0
+            ],
+            "balanced_accuracy": [
+              0.625,
+              1.0
+            ]
+          }
+        }
+      },
+      "errors": [
+        {
+          "id": "14",
+          "original_id": "umh2x-938db1c3bfee4",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        }
+      ],
+      "runtime": {
+        "calls": 16,
+        "mean_elapsed_seconds": 9.1665,
+        "sum_elapsed_seconds": 146.664,
+        "reported_total_cost_usd": 0.706719,
+        "reported_total_tokens": null
+      }
+    },
+    "GPT-5.4 source-only control": {
+      "metrics": {
+        "TP": 0,
+        "FP": 0,
+        "FN": 9,
+        "TN": 7,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "accuracy": 0.4375,
+        "mcc": 0.0,
+        "balanced_accuracy": 0.5
+      },
+      "incident_cluster_bootstrap_ci_95": {
+        "precision": [
+          0.0,
+          0.0
+        ],
+        "recall": [
+          0.0,
+          0.0
+        ],
+        "f1": [
+          0.0,
+          0.0
+        ],
+        "mcc": [
+          0.0,
+          0.0
+        ],
+        "balanced_accuracy": [
+          0.5,
+          0.5
+        ]
+      },
+      "pair_metrics": {
+        "exact_pairs": 0,
+        "total_pairs": 8,
+        "exact_pair_accuracy": 0.0,
+        "mixed_gold_exact_pairs": 0,
+        "mixed_gold_pairs": 7,
+        "mixed_gold_exact_accuracy": 0.0,
+        "prediction_change_pairs": 0,
+        "prediction_change_rate": 0.0,
+        "details": [
+          {
+            "incident_id": "crosscheck-incident-libtiff-cve-2019-14973",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-add100",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ext4shl",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ptr-2008-1685",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-1",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-12",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": false,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-3",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-9",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          }
+        ]
+      },
+      "by_stratum": {
+        "frozen_primary": {
+          "metrics": {
+            "TP": 0,
+            "FP": 0,
+            "FN": 5,
+            "TN": 3,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 0.375,
+            "mcc": 0.0,
+            "balanced_accuracy": 0.5
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              0.0,
+              0.0
+            ],
+            "recall": [
+              0.0,
+              0.0
+            ],
+            "f1": [
+              0.0,
+              0.0
+            ],
+            "mcc": [
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": [
+              0.5,
+              0.5
+            ]
+          }
+        },
+        "post_freeze_crosscheck": {
+          "metrics": {
+            "TP": 0,
+            "FP": 0,
+            "FN": 4,
+            "TN": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 0.5,
+            "mcc": 0.0,
+            "balanced_accuracy": 0.5
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              0.0,
+              0.0
+            ],
+            "recall": [
+              0.0,
+              0.0
+            ],
+            "f1": [
+              0.0,
+              0.0
+            ],
+            "mcc": [
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": [
+              0.5,
+              0.5
+            ]
+          }
+        }
+      },
+      "errors": [
+        {
+          "id": "0",
+          "original_id": "umh2-19009f0afd98eb",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "1",
+          "original_id": "umh2-4c0f046081fbc7",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "2",
+          "original_id": "umh2-4c94c4889714a8",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "4",
+          "original_id": "umh2-baf1bff81fb426",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "6",
+          "original_id": "umh2-d622c9e5d6b2e4",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "9",
+          "original_id": "umh2x-0fcad3f1b45e6",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "10",
+          "original_id": "umh2x-11293eff18ca2",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "12",
+          "original_id": "umh2x-58e94c608b9a0",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "15",
+          "original_id": "umh2x-e87525d441ca6",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        }
+      ],
+      "runtime": {
+        "calls": 16,
+        "mean_elapsed_seconds": 13.8086625,
+        "sum_elapsed_seconds": 220.9386,
+        "reported_total_cost_usd": null,
+        "reported_total_tokens": 53987
+      }
+    },
+    "Claude Opus 4.6 source-only control": {
+      "metrics": {
+        "TP": 5,
+        "FP": 4,
+        "FN": 4,
+        "TN": 3,
+        "precision": 0.5555555555555556,
+        "recall": 0.5555555555555556,
+        "f1": 0.5555555555555556,
+        "accuracy": 0.5,
+        "mcc": -0.015873015873015872,
+        "balanced_accuracy": 0.4920634920634921
+      },
+      "incident_cluster_bootstrap_ci_95": {
+        "precision": [
+          0.5,
+          0.75
+        ],
+        "recall": [
+          0.25,
+          0.875
+        ],
+        "f1": [
+          0.3333333333333333,
+          0.6363636363636365
+        ],
+        "mcc": [
+          -0.16363636363636364,
+          0.10087125544480041
+        ],
+        "balanced_accuracy": [
+          0.4181818181818182,
+          0.5396825396825397
+        ]
+      },
+      "pair_metrics": {
+        "exact_pairs": 0,
+        "total_pairs": 8,
+        "exact_pair_accuracy": 0.0,
+        "mixed_gold_exact_pairs": 0,
+        "mixed_gold_pairs": 7,
+        "mixed_gold_exact_accuracy": 0.0,
+        "prediction_change_pairs": 1,
+        "prediction_change_rate": 0.125,
+        "details": [
+          {
+            "incident_id": "crosscheck-incident-libtiff-cve-2019-14973",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-add100",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ext4shl",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ptr-2008-1685",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-1",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-12",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": false,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-3",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-9",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          }
+        ]
+      },
+      "by_stratum": {
+        "frozen_primary": {
+          "metrics": {
+            "TP": 2,
+            "FP": 1,
+            "FN": 3,
+            "TN": 2,
+            "precision": 0.6666666666666666,
+            "recall": 0.4,
+            "f1": 0.5,
+            "accuracy": 0.5,
+            "mcc": 0.06666666666666667,
+            "balanced_accuracy": 0.5333333333333333
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              0.0,
+              1.0
+            ],
+            "recall": [
+              0.0,
+              0.75
+            ],
+            "f1": [
+              0.0,
+              0.6666666666666666
+            ],
+            "mcc": [
+              -0.29277002188455997,
+              0.3333333333333333
+            ],
+            "balanced_accuracy": [
+              0.3333333333333333,
+              0.7142857142857143
+            ]
+          }
+        },
+        "post_freeze_crosscheck": {
+          "metrics": {
+            "TP": 3,
+            "FP": 3,
+            "FN": 1,
+            "TN": 1,
+            "precision": 0.5,
+            "recall": 0.75,
+            "f1": 0.6,
+            "accuracy": 0.5,
+            "mcc": 0.0,
+            "balanced_accuracy": 0.5
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              0.5,
+              0.5
+            ],
+            "recall": [
+              0.25,
+              1.0
+            ],
+            "f1": [
+              0.3333333333333333,
+              0.6666666666666666
+            ],
+            "mcc": [
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": [
+              0.5,
+              0.5
+            ]
+          }
+        }
+      },
+      "errors": [
+        {
+          "id": "2",
+          "original_id": "umh2-4c94c4889714a8",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "3",
+          "original_id": "umh2-9f6f9ceb20a201",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "4",
+          "original_id": "umh2-baf1bff81fb426",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "6",
+          "original_id": "umh2-d622c9e5d6b2e4",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "8",
+          "original_id": "umh2x-0148235c61ba5",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "9",
+          "original_id": "umh2x-0fcad3f1b45e6",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "13",
+          "original_id": "umh2x-7af77088aa4c0",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "14",
+          "original_id": "umh2x-938db1c3bfee4",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        }
+      ],
+      "runtime": {
+        "calls": 16,
+        "mean_elapsed_seconds": 9.3639875,
+        "sum_elapsed_seconds": 149.8238,
+        "reported_total_cost_usd": 0.37087,
+        "reported_total_tokens": null
+      }
+    },
+    "GPT-5.4 shuffled-assembly control": {
+      "metrics": {
+        "TP": 9,
+        "FP": 7,
+        "FN": 0,
+        "TN": 0,
+        "precision": 0.5625,
+        "recall": 1.0,
+        "f1": 0.72,
+        "accuracy": 0.5625,
+        "mcc": 0.0,
+        "balanced_accuracy": 0.5
+      },
+      "incident_cluster_bootstrap_ci_95": {
+        "precision": [
+          0.5,
+          0.6875
+        ],
+        "recall": [
+          1.0,
+          1.0
+        ],
+        "f1": [
+          0.6666666666666666,
+          0.8148148148148148
+        ],
+        "mcc": [
+          0.0,
+          0.0
+        ],
+        "balanced_accuracy": [
+          0.5,
+          0.5
+        ]
+      },
+      "pair_metrics": {
+        "exact_pairs": 1,
+        "total_pairs": 8,
+        "exact_pair_accuracy": 0.125,
+        "mixed_gold_exact_pairs": 0,
+        "mixed_gold_pairs": 7,
+        "mixed_gold_exact_accuracy": 0.0,
+        "prediction_change_pairs": 0,
+        "prediction_change_rate": 0.0,
+        "details": [
+          {
+            "incident_id": "crosscheck-incident-libtiff-cve-2019-14973",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-add100",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ext4shl",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ptr-2008-1685",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-1",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-12",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": false,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-3",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-9",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          }
+        ]
+      },
+      "by_stratum": {
+        "frozen_primary": {
+          "metrics": {
+            "TP": 5,
+            "FP": 3,
+            "FN": 0,
+            "TN": 0,
+            "precision": 0.625,
+            "recall": 1.0,
+            "f1": 0.7692307692307693,
+            "accuracy": 0.625,
+            "mcc": 0.0,
+            "balanced_accuracy": 0.5
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              0.5,
+              0.875
+            ],
+            "recall": [
+              1.0,
+              1.0
+            ],
+            "f1": [
+              0.6666666666666666,
+              0.9333333333333333
+            ],
+            "mcc": [
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": [
+              0.5,
+              0.5
+            ]
+          }
+        },
+        "post_freeze_crosscheck": {
+          "metrics": {
+            "TP": 4,
+            "FP": 4,
+            "FN": 0,
+            "TN": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "accuracy": 0.5,
+            "mcc": 0.0,
+            "balanced_accuracy": 0.5
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              0.5,
+              0.5
+            ],
+            "recall": [
+              1.0,
+              1.0
+            ],
+            "f1": [
+              0.6666666666666666,
+              0.6666666666666666
+            ],
+            "mcc": [
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": [
+              0.5,
+              0.5
+            ]
+          }
+        }
+      },
+      "errors": [
+        {
+          "id": "3",
+          "original_id": "umh2-9f6f9ceb20a201",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "5",
+          "original_id": "umh2-bb2f22c1b2d5f1",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "7",
+          "original_id": "umh2-fd8c891cc374e2",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "8",
+          "original_id": "umh2x-0148235c61ba5",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "11",
+          "original_id": "umh2x-58b46dcb4fedb",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "13",
+          "original_id": "umh2x-7af77088aa4c0",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "14",
+          "original_id": "umh2x-938db1c3bfee4",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        }
+      ],
+      "runtime": {
+        "calls": 16,
+        "mean_elapsed_seconds": 15.13378125,
+        "sum_elapsed_seconds": 242.1405,
+        "reported_total_cost_usd": null,
+        "reported_total_tokens": 43004
+      }
+    },
+    "Claude Opus 4.6 shuffled-assembly control": {
+      "metrics": {
+        "TP": 8,
+        "FP": 7,
+        "FN": 1,
+        "TN": 0,
+        "precision": 0.5333333333333333,
+        "recall": 0.8888888888888888,
+        "f1": 0.6666666666666667,
+        "accuracy": 0.5,
+        "mcc": -0.2277100170213244,
+        "balanced_accuracy": 0.4444444444444444
+      },
+      "incident_cluster_bootstrap_ci_95": {
+        "precision": [
+          0.38461538461538464,
+          0.6875
+        ],
+        "recall": [
+          0.625,
+          1.0
+        ],
+        "f1": [
+          0.4761904761904762,
+          0.8148148148148148
+        ],
+        "mcc": [
+          -0.48038446141526137,
+          0.0
+        ],
+        "balanced_accuracy": [
+          0.3125,
+          0.5
+        ]
+      },
+      "pair_metrics": {
+        "exact_pairs": 1,
+        "total_pairs": 8,
+        "exact_pair_accuracy": 0.125,
+        "mixed_gold_exact_pairs": 0,
+        "mixed_gold_pairs": 7,
+        "mixed_gold_exact_accuracy": 0.0,
+        "prediction_change_pairs": 1,
+        "prediction_change_rate": 0.125,
+        "details": [
+          {
+            "incident_id": "crosscheck-incident-libtiff-cve-2019-14973",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-add100",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ext4shl",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ptr-2008-1685",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-1",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-12",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": false,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-3",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-9",
+            "stratum": "frozen_primary",
+            "pair_exact": false,
+            "gold_mixed": true,
+            "predictions_differ": true
+          }
+        ]
+      },
+      "by_stratum": {
+        "frozen_primary": {
+          "metrics": {
+            "TP": 4,
+            "FP": 3,
+            "FN": 1,
+            "TN": 0,
+            "precision": 0.5714285714285714,
+            "recall": 0.8,
+            "f1": 0.6666666666666666,
+            "accuracy": 0.5,
+            "mcc": -0.29277002188455997,
+            "balanced_accuracy": 0.4
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              0.2,
+              0.875
+            ],
+            "recall": [
+              0.25,
+              1.0
+            ],
+            "f1": [
+              0.22222222222222224,
+              0.9333333333333333
+            ],
+            "mcc": [
+              -0.7745966692414834,
+              0.0
+            ],
+            "balanced_accuracy": [
+              0.125,
+              0.5
+            ]
+          }
+        },
+        "post_freeze_crosscheck": {
+          "metrics": {
+            "TP": 4,
+            "FP": 4,
+            "FN": 0,
+            "TN": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "accuracy": 0.5,
+            "mcc": 0.0,
+            "balanced_accuracy": 0.5
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              0.5,
+              0.5
+            ],
+            "recall": [
+              1.0,
+              1.0
+            ],
+            "f1": [
+              0.6666666666666666,
+              0.6666666666666666
+            ],
+            "mcc": [
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": [
+              0.5,
+              0.5
+            ]
+          }
+        }
+      },
+      "errors": [
+        {
+          "id": "0",
+          "original_id": "umh2-19009f0afd98eb",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_ELIMINATED",
+          "prediction": "CHECK_PRESENT"
+        },
+        {
+          "id": "3",
+          "original_id": "umh2-9f6f9ceb20a201",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "5",
+          "original_id": "umh2-bb2f22c1b2d5f1",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "7",
+          "original_id": "umh2-fd8c891cc374e2",
+          "stratum": "frozen_primary",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "8",
+          "original_id": "umh2x-0148235c61ba5",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "11",
+          "original_id": "umh2x-58b46dcb4fedb",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "13",
+          "original_id": "umh2x-7af77088aa4c0",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        },
+        {
+          "id": "14",
+          "original_id": "umh2x-938db1c3bfee4",
+          "stratum": "post_freeze_crosscheck",
+          "actual": "CHECK_PRESENT",
+          "prediction": "CHECK_ELIMINATED"
+        }
+      ],
+      "runtime": {
+        "calls": 16,
+        "mean_elapsed_seconds": 9.508875,
+        "sum_elapsed_seconds": 152.142,
+        "reported_total_cost_usd": 0.682509,
+        "reported_total_tokens": null
+      }
+    },
+    "Claude source-aware + GPT Stage-B": {
+      "metrics": {
+        "TP": 9,
+        "FP": 0,
+        "FN": 0,
+        "TN": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "mcc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "incident_cluster_bootstrap_ci_95": {
+        "precision": [
+          1.0,
+          1.0
+        ],
+        "recall": [
+          1.0,
+          1.0
+        ],
+        "f1": [
+          1.0,
+          1.0
+        ],
+        "mcc": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          1.0,
+          1.0
+        ]
+      },
+      "pair_metrics": {
+        "exact_pairs": 8,
+        "total_pairs": 8,
+        "exact_pair_accuracy": 1.0,
+        "mixed_gold_exact_pairs": 7,
+        "mixed_gold_pairs": 7,
+        "mixed_gold_exact_accuracy": 1.0,
+        "prediction_change_pairs": 7,
+        "prediction_change_rate": 0.875,
+        "details": [
+          {
+            "incident_id": "crosscheck-incident-libtiff-cve-2019-14973",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-add100",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ext4shl",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "crosscheck-incident-stack-ptr-2008-1685",
+            "stratum": "post_freeze_crosscheck",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-1",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-12",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": false,
+            "predictions_differ": false
+          },
+          {
+            "incident_id": "incident-b-3",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          },
+          {
+            "incident_id": "incident-b-9",
+            "stratum": "frozen_primary",
+            "pair_exact": true,
+            "gold_mixed": true,
+            "predictions_differ": true
+          }
+        ]
+      },
+      "by_stratum": {
+        "frozen_primary": {
+          "metrics": {
+            "TP": 5,
+            "FP": 0,
+            "FN": 0,
+            "TN": 3,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "mcc": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              1.0,
+              1.0
+            ],
+            "recall": [
+              1.0,
+              1.0
+            ],
+            "f1": [
+              1.0,
+              1.0
+            ],
+            "mcc": [
+              1.0,
+              1.0
+            ],
+            "balanced_accuracy": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "post_freeze_crosscheck": {
+          "metrics": {
+            "TP": 4,
+            "FP": 0,
+            "FN": 0,
+            "TN": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "mcc": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "incident_cluster_bootstrap_ci_95": {
+            "precision": [
+              1.0,
+              1.0
+            ],
+            "recall": [
+              1.0,
+              1.0
+            ],
+            "f1": [
+              1.0,
+              1.0
+            ],
+            "mcc": [
+              1.0,
+              1.0
+            ],
+            "balanced_accuracy": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "errors": [],
+      "runtime": {
+        "stage_a": {
+          "calls": 16,
+          "mean_elapsed_seconds": 9.1665,
+          "sum_elapsed_seconds": 146.664,
+          "reported_total_cost_usd": 0.706719,
+          "reported_total_tokens": null
+        },
+        "stage_b": {
+          "calls": 10,
+          "mean_elapsed_seconds": 15.717189999999999,
+          "sum_elapsed_seconds": 157.1719,
+          "reported_total_cost_usd": null,
+          "reported_total_tokens": 16138
+        }
+      }
+    }
+  },
+  "artifact_sha256": {
+    "real_world_eval\\results\\annotation_workpacks\\untouched_mechanism_holdout_v2_2plus1\\round_results\\untouched_mechanism_holdout_v2_eval_clean.json": "333acc67dad864ae54b2564a52d46bb68a2f1da97938aeffac259dc8a3b23458",
+    "real_world_eval\\results\\annotation_workpacks\\untouched_mechanism_holdout_v2_2plus1\\round_results\\untouched_mechanism_holdout_v2_eval_pair_manifest.json": "65fc3624e80182eed9ce84e28453272f9b2a34851ab4541c92de8302a0b2da71",
+    "real_world_eval\\results\\annotation_workpacks\\untouched_mechanism_holdout_v2_2plus1\\round_results\\untouched_mechanism_holdout_v2_equal_information_baselines.json": "5cce0949e93cb6507a4e1250c8661df5a3d578244e4cca654a4946edec73f482",
+    "real_world_eval\\results\\stage_b_verifier_raw_results_untouched_mechanism_v2_claude_stageb_gpt54.json": "010fb504c10b096c340820634f89cda2229cee244bbdcf41310ea847140ff78f",
+    "real_world_eval\\results\\llm_eval_raw_results_untouched_mechanism_v2_gpt54_strict.json": "c8b4c85e75ddf09f67b0d3c1e649c47e0f6715f4bfa6cfab7d5576adbbf4200c",
+    "real_world_eval\\results\\llm_eval_raw_results_untouched_mechanism_v2_claude_opus46_nothink_strict.json": "e5d3704ae14165d3c852f3bc1eb6a1e181fcea7d767b1c337b4443bd14de0820",
+    "real_world_eval\\results\\llm_eval_raw_results_untouched_mechanism_v2_gpt54.json": "c12c24d79330d9897aaf17b934faa499958bb4d2909b40c59b3737503b1b4860",
+    "real_world_eval\\results\\llm_eval_raw_results_untouched_mechanism_v2_claude_opus46_nothink.json": "efa76d372d065443d6fd09d94c4331ea9482d6bf588f64cdbc4a72be9054a00a",
+    "real_world_eval\\results\\llm_eval_raw_results_untouched_mechanism_v2_gpt54_sourceonly.json": "511efe6a84d6c90c5e6ae5bc17de0f6dfda6b2977b21445ee26be33e6f0792dc",
+    "real_world_eval\\results\\llm_eval_raw_results_untouched_mechanism_v2_claude_opus46_nothink_sourceonly.json": "cc54d852b9897accc2a612c8c9ebaf784e27b4075b25824e50bc7f9f2f141808",
+    "real_world_eval\\results\\llm_eval_raw_results_untouched_mechanism_v2_gpt54_shuffled.json": "a656c60a3f68de447223b6e8d24baa0c11642e4912accee955c04fea759b28d9",
+    "real_world_eval\\results\\llm_eval_raw_results_untouched_mechanism_v2_claude_opus46_nothink_shuffled.json": "9023a3052272611bf1b537e8251d98721f1e386d9952618405574d9b689f29ed"
+  }
+}

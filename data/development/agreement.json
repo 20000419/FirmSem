@@ -1,0 +1,24 @@
+{
+  "rows": 131,
+  "agreements": 124,
+  "disagreements": 7,
+  "agreement_rate": 0.9465648854961832,
+  "cohens_kappa": 0.8888215324927256,
+  "bootstrap_replicates": 10000,
+  "bootstrap_defined": 10000,
+  "bootstrap_seed": 2026071803,
+  "ci_95": [
+    0.8050572913258294,
+    0.9555443677018881
+  ],
+  "annotator_a_marginals": {
+    "CHECK_ELIMINATED": 43,
+    "CHECK_PRESENT": 82,
+    "AMBIGUOUS": 6
+  },
+  "annotator_b_marginals": {
+    "CHECK_ELIMINATED": 43,
+    "CHECK_PRESENT": 86,
+    "AMBIGUOUS": 2
+  }
+}

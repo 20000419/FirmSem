@@ -1,0 +1,26 @@
+{
+  "title": "FirmSem: Auditing Security-Guard Survival in Compiler-Optimized Release Binaries",
+  "upload_type": "software",
+  "publication_date": "2026-07-22",
+  "version": "1.0.0",
+  "language": "eng",
+  "access_right": "open",
+  "license": "Apache-2.0",
+  "description": "Reproducibility artifact for obligation-conditioned verification of security-guard survival in compiler-optimized release binaries. It includes GuardIR, independently adjudicated benchmarks, deterministic and learned baselines, frozen semantic-model transcripts, and executable GCC/Clang security replays.",
+  "creators": [
+    {"name": "Liu, Zhenyu", "affiliation": "Information Engineering University"},
+    {"name": "Chen, Zhifeng", "affiliation": "Information Engineering University"},
+    {"name": "Li, Qingbao", "affiliation": "Information Engineering University"},
+    {"name": "Li, Xiaonan", "affiliation": "Zhongyuan University of Technology"},
+    {"name": "Jiang, Mingcheng", "affiliation": "Information Engineering University"}
+  ],
+  "keywords": [
+    "compiler optimization",
+    "binary analysis",
+    "release assurance",
+    "security verification",
+    "undefined behavior",
+    "software supply chain"
+  ],
+  "notes": "Project code is Apache-2.0; project-authored metadata, annotations, documentation, and figures are CC BY 4.0; third-party excerpts retain upstream terms."
+}

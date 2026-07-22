@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use FirmSem, please cite this software artifact."
+title: "FirmSem: Auditing Security-Guard Survival in Compiler-Optimized Release Binaries"
+type: software
+version: 1.0.0
+date-released: 2026-07-22
+repository-code: "https://github.com/20000419/FirmSem"
+doi: 10.5281/zenodo.21485535
+url: "https://doi.org/10.5281/zenodo.21485535"
+license: Apache-2.0
+authors:
+  - family-names: Liu
+    given-names: Zhenyu
+    affiliation: Information Engineering University
+  - family-names: Chen
+    given-names: Zhifeng
+    affiliation: Information Engineering University
+  - family-names: Li
+    given-names: Qingbao
+    affiliation: Information Engineering University
+  - family-names: Li
+    given-names: Xiaonan
+    affiliation: Zhongyuan University of Technology
+  - family-names: Jiang
+    given-names: Mingcheng
+    affiliation: Information Engineering University
+keywords:
+  - compiler optimization
+  - binary analysis
+  - release assurance
+  - security verification
+  - undefined behavior
+  - software supply chain
+abstract: >-
+  FirmSem verifies whether an optimized release binary still enforces a
+  specified source security obligation before its protected operation. The
+  artifact includes typed GuardIR evidence, independently adjudicated data,
+  controlled baselines, frozen semantic-model transcripts, and executable
+  compiler-security replays.

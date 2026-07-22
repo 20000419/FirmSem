@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "dataset": "real_world_eval\\results\\security_impact_same_function_counterfactual_eval.json",
+    "pairs": 4,
+    "records": 8,
+    "claim_boundary": "Four controlled pairs are a causal sanity check, not external validation or a prevalence sample.",
+    "supersedes": "impact_samefunc_*_v1 (whole-file assembly leakage)"
+  },
+  "pair_audit": [
+    {
+      "pair_id": "gcc15:fallocate_post_overflow_guard",
+      "invariant_fields_equal": true,
+      "assembly_differs": true,
+      "forbidden_assembly_markers": []
+    },
+    {
+      "pair_id": "gcc15:allocation_post_multiply_guard",
+      "invariant_fields_equal": true,
+      "assembly_differs": true,
+      "forbidden_assembly_markers": []
+    },
+    {
+      "pair_id": "clang22:fallocate_post_overflow_guard",
+      "invariant_fields_equal": true,
+      "assembly_differs": true,
+      "forbidden_assembly_markers": []
+    },
+    {
+      "pair_id": "clang22:allocation_post_multiply_guard",
+      "invariant_fields_equal": true,
+      "assembly_differs": true,
+      "forbidden_assembly_markers": []
+    }
+  ],
+  "metrics": {
+    "gpt54_codex_cli": {
+      "records": 8,
+      "parsed": 8,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 4,
+      "f1": 1.0,
+      "balanced_accuracy": 1.0,
+      "mcc": 1.0
+    },
+    "claude_code_opus46_requested": {
+      "records": 8,
+      "parsed": 8,
+      "tp": 3,
+      "fp": 0,
+      "fn": 1,
+      "tn": 4,
+      "f1": 0.8571,
+      "balanced_accuracy": 0.875,
+      "mcc": 0.7746
+    }
+  }
+}

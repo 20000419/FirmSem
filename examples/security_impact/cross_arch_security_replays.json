@@ -1,0 +1,334 @@
+{
+  "source": "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\security_impact_core.c",
+  "scope": "static cross-architecture code-generation replication; runtime impact is measured separately on x86-64",
+  "records": [
+    {
+      "architecture": "x86_64",
+      "target": "x86_64-unknown-linux-gnu",
+      "policy": "default",
+      "command": [
+        "C:\\Program Files\\LLVM\\bin\\clang.EXE",
+        "--target=x86_64-unknown-linux-gnu",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-O3",
+        "-S",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\security_impact_core.c",
+        "-o",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\results\\cross_arch\\x86_64_default.s"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "functions": {
+        "fallocate_post_overflow_guard": {
+          "instruction_count": 10,
+          "conditional_or_select_count": 3,
+          "assembly": "fallocate_post_overflow_guard:          # @fallocate_post_overflow_guard\n# %bb.0:\n\tleaq\t(%rsi,%rdi), %rcx\n\tcmpq\t%rdx, %rcx\n\tmovq\t$-27, %rax\n\tcmovleq\t%rcx, %rax\n\ttestq\t%rsi, %rsi\n\tmovq\t$-22, %rcx\n\tcmovleq\t%rcx, %rax\n\ttestq\t%rdi, %rdi\n\tcmovsq\t%rcx, %rax\n\tretq\n.Lfunc_end0:"
+        },
+        "allocation_post_multiply_guard": {
+          "instruction_count": 8,
+          "conditional_or_select_count": 2,
+          "assembly": "allocation_post_multiply_guard:         # @allocation_post_multiply_guard\n# %bb.0:\n\tmovl\t%esi, %eax\n\timull\t%edi, %eax\n\ttestl\t%esi, %esi\n\tmovl\t$-22, %ecx\n\tcmovlel\t%ecx, %eax\n\ttestl\t%edi, %edi\n\tcmovlel\t%ecx, %eax\n\tretq\n.Lfunc_end1:"
+        },
+        "ext4_post_shift_guard": {
+          "instruction_count": 2,
+          "conditional_or_select_count": 0,
+          "assembly": "ext4_post_shift_guard:                  # @ext4_post_shift_guard\n# %bb.0:\n\txorl\t%eax, %eax\n\tretq\n.Lfunc_end2:"
+        },
+        "ext4_pre_shift_guard": {
+          "instruction_count": 4,
+          "conditional_or_select_count": 1,
+          "assembly": "ext4_pre_shift_guard:                   # @ext4_pre_shift_guard\n# %bb.0:\n\txorl\t%eax, %eax\n\tcmpl\t$32, %edi\n\tadcl\t$-1, %eax\n\tretq\n.Lfunc_end3:"
+        }
+      }
+    },
+    {
+      "architecture": "x86_64",
+      "target": "x86_64-unknown-linux-gnu",
+      "policy": "wrap_policy",
+      "command": [
+        "C:\\Program Files\\LLVM\\bin\\clang.EXE",
+        "--target=x86_64-unknown-linux-gnu",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-O3",
+        "-fwrapv",
+        "-fno-strict-overflow",
+        "-S",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\security_impact_core.c",
+        "-o",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\results\\cross_arch\\x86_64_wrap_policy.s"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "functions": {
+        "fallocate_post_overflow_guard": {
+          "instruction_count": 14,
+          "conditional_or_select_count": 5,
+          "assembly": "fallocate_post_overflow_guard:          # @fallocate_post_overflow_guard\n# %bb.0:\n\ttestq\t%rdi, %rdi\n\tsets\t%al\n\ttestq\t%rsi, %rsi\n\tsetle\t%cl\n\torb\t%al, %cl\n\tmovq\t$-22, %rax\n\tjne\t.LBB0_2\n# %bb.1:\n\taddq\t%rdi, %rsi\n\tmovq\t$-27, %rcx\n\tmovq\t%rsi, %rax\n\tcmovsq\t%rcx, %rax\n\tcmpq\t%rdx, %rsi\n\tcmovgq\t%rcx, %rax\n.LBB0_2:\n\tretq\n.Lfunc_end0:"
+        },
+        "allocation_post_multiply_guard": {
+          "instruction_count": 18,
+          "conditional_or_select_count": 6,
+          "assembly": "allocation_post_multiply_guard:         # @allocation_post_multiply_guard\n# %bb.0:\n\ttestl\t%edi, %edi\n\tsetle\t%al\n\ttestl\t%esi, %esi\n\tsetle\t%cl\n\torb\t%al, %cl\n\tmovl\t$-22, %eax\n\tjne\t.LBB1_4\n# %bb.1:\n\tmovl\t%edi, %eax\n\tmull\t%esi\n\tseto\t%cl\n\ttestl\t%eax, %eax\n\tjs\t.LBB1_2\n# %bb.3:\n\ttestb\t%cl, %cl\n\tmovl\t$-75, %ecx\n\tcmovnel\t%ecx, %eax\n.LBB1_4:\n\tretq\n.LBB1_2:\n\tmovl\t$-75, %eax\n\tretq\n.Lfunc_end1:"
+        },
+        "ext4_post_shift_guard": {
+          "instruction_count": 2,
+          "conditional_or_select_count": 0,
+          "assembly": "ext4_post_shift_guard:                  # @ext4_post_shift_guard\n# %bb.0:\n\txorl\t%eax, %eax\n\tretq\n.Lfunc_end2:"
+        },
+        "ext4_pre_shift_guard": {
+          "instruction_count": 4,
+          "conditional_or_select_count": 1,
+          "assembly": "ext4_pre_shift_guard:                   # @ext4_pre_shift_guard\n# %bb.0:\n\txorl\t%eax, %eax\n\tcmpl\t$32, %edi\n\tadcl\t$-1, %eax\n\tretq\n.Lfunc_end3:"
+        }
+      }
+    },
+    {
+      "architecture": "aarch64",
+      "target": "aarch64-none-elf",
+      "policy": "default",
+      "command": [
+        "C:\\Program Files\\LLVM\\bin\\clang.EXE",
+        "--target=aarch64-none-elf",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-O3",
+        "-S",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\security_impact_core.c",
+        "-o",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\results\\cross_arch\\aarch64_default.s"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "functions": {
+        "fallocate_post_overflow_guard": {
+          "instruction_count": 9,
+          "conditional_or_select_count": 3,
+          "assembly": "fallocate_post_overflow_guard:          // @fallocate_post_overflow_guard\n// %bb.0:\n\tadd\tx8, x1, x0\n\tmov\tx9, #-27                        // =0xffffffffffffffe5\n\tcmp\tx8, x2\n\tcsel\tx8, x9, x8, gt\n\tcmp\tx1, #1\n\tmov\tx9, #-22                        // =0xffffffffffffffea\n\tccmp\tx0, #0, #8, ge\n\tcsel\tx0, x9, x8, mi\n\tret\n.Lfunc_end0:"
+        },
+        "allocation_post_multiply_guard": {
+          "instruction_count": 6,
+          "conditional_or_select_count": 2,
+          "assembly": "allocation_post_multiply_guard:         // @allocation_post_multiply_guard\n// %bb.0:\n\tmul\tw9, w1, w0\n\tcmp\tw1, #1\n\tmov\tw8, #-22                        // =0xffffffea\n\tccmp\tw0, #1, #8, ge\n\tcsel\tw0, w8, w9, lt\n\tret\n.Lfunc_end1:"
+        },
+        "ext4_post_shift_guard": {
+          "instruction_count": 2,
+          "conditional_or_select_count": 0,
+          "assembly": "ext4_post_shift_guard:                  // @ext4_post_shift_guard\n// %bb.0:\n\tmov\tw0, wzr\n\tret\n.Lfunc_end2:"
+        },
+        "ext4_pre_shift_guard": {
+          "instruction_count": 3,
+          "conditional_or_select_count": 1,
+          "assembly": "ext4_pre_shift_guard:                   // @ext4_pre_shift_guard\n// %bb.0:\n\tcmp\tw0, #31\n\tcsetm\tw0, hi\n\tret\n.Lfunc_end3:"
+        }
+      }
+    },
+    {
+      "architecture": "aarch64",
+      "target": "aarch64-none-elf",
+      "policy": "wrap_policy",
+      "command": [
+        "C:\\Program Files\\LLVM\\bin\\clang.EXE",
+        "--target=aarch64-none-elf",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-O3",
+        "-fwrapv",
+        "-fno-strict-overflow",
+        "-S",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\security_impact_core.c",
+        "-o",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\results\\cross_arch\\aarch64_wrap_policy.s"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "functions": {
+        "fallocate_post_overflow_guard": {
+          "instruction_count": 11,
+          "conditional_or_select_count": 4,
+          "assembly": "fallocate_post_overflow_guard:          // @fallocate_post_overflow_guard\n// %bb.0:\n\tadd\tx8, x1, x0\n\tmov\tx9, #-27                        // =0xffffffffffffffe5\n\tmov\tx10, #-22                       // =0xffffffffffffffea\n\tcmp\tx8, #0\n\tccmp\tx8, x2, #0, pl\n\tcsel\tx8, x9, x8, gt\n\tcmp\tx1, #1\n\tcsel\tx8, x10, x8, lt\n\ttst\tx0, #0x8000000000000000\n\tcsel\tx0, x10, x8, ne\n\tret\n.Lfunc_end0:"
+        },
+        "allocation_post_multiply_guard": {
+          "instruction_count": 14,
+          "conditional_or_select_count": 5,
+          "assembly": "allocation_post_multiply_guard:         // @allocation_post_multiply_guard\n// %bb.0:\n\tmov\tw8, w0\n\tcmp\tw0, #1\n\tmov\tw0, #-22                        // =0xffffffea\n\tb.lt\t.LBB1_4\n// %bb.1:\n\tcmp\tw1, #1\n\tb.lt\t.LBB1_4\n// %bb.2:\n\tumull\tx8, w8, w1\n\tmov\tw0, #-75                        // =0xffffffb5\n\ttst\tx8, #0xffffffff00000000\n\tcset\tw9, ne\n\ttbnz\tw8, #31, .LBB1_4\n// %bb.3:\n\tcmp\tw9, #0\n\tcsel\tw0, w0, w8, ne\n.LBB1_4:\n\tret\n.Lfunc_end1:"
+        },
+        "ext4_post_shift_guard": {
+          "instruction_count": 2,
+          "conditional_or_select_count": 0,
+          "assembly": "ext4_post_shift_guard:                  // @ext4_post_shift_guard\n// %bb.0:\n\tmov\tw0, wzr\n\tret\n.Lfunc_end2:"
+        },
+        "ext4_pre_shift_guard": {
+          "instruction_count": 3,
+          "conditional_or_select_count": 1,
+          "assembly": "ext4_pre_shift_guard:                   // @ext4_pre_shift_guard\n// %bb.0:\n\tcmp\tw0, #31\n\tcsetm\tw0, hi\n\tret\n.Lfunc_end3:"
+        }
+      }
+    },
+    {
+      "architecture": "riscv64",
+      "target": "riscv64-none-elf",
+      "policy": "default",
+      "command": [
+        "C:\\Program Files\\LLVM\\bin\\clang.EXE",
+        "--target=riscv64-none-elf",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-O3",
+        "-S",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\security_impact_core.c",
+        "-o",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\results\\cross_arch\\riscv64_default.s"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "functions": {
+        "fallocate_post_overflow_guard": {
+          "instruction_count": 11,
+          "conditional_or_select_count": 4,
+          "assembly": "fallocate_post_overflow_guard:          # @fallocate_post_overflow_guard\n# %bb.0:\n\tsrli\ta3, a0, 63\n\tslti\ta4, a1, 1\n\tadd\ta0, a0, a1\n\tor\ta1, a3, a4\n\tblt\ta2, a0, .LBB0_3\n# %bb.1:\n\tbnez\ta1, .LBB0_4\n.LBB0_2:\n\tret\n.LBB0_3:\n\tli\ta0, -27\n\tbeqz\ta1, .LBB0_2\n.LBB0_4:\n\tli\ta0, -22\n\tret\n.Lfunc_end0:"
+        },
+        "allocation_post_multiply_guard": {
+          "instruction_count": 8,
+          "conditional_or_select_count": 3,
+          "assembly": "allocation_post_multiply_guard:         # @allocation_post_multiply_guard\n# %bb.0:\n\tslti\ta2, a0, 1\n\tslti\ta3, a1, 1\n\tor\ta2, a2, a3\n\tbnez\ta2, .LBB1_2\n# %bb.1:\n\tmulw\ta0, a1, a0\n\tret\n.LBB1_2:\n\tli\ta0, -22\n\tret\n.Lfunc_end1:"
+        },
+        "ext4_post_shift_guard": {
+          "instruction_count": 2,
+          "conditional_or_select_count": 0,
+          "assembly": "ext4_post_shift_guard:                  # @ext4_post_shift_guard\n# %bb.0:\n\tli\ta0, 0\n\tret\n.Lfunc_end2:"
+        },
+        "ext4_pre_shift_guard": {
+          "instruction_count": 3,
+          "conditional_or_select_count": 1,
+          "assembly": "ext4_pre_shift_guard:                   # @ext4_pre_shift_guard\n# %bb.0:\n\tsltiu\ta0, a0, 32\n\taddi\ta0, a0, -1\n\tret\n.Lfunc_end3:"
+        }
+      }
+    },
+    {
+      "architecture": "riscv64",
+      "target": "riscv64-none-elf",
+      "policy": "wrap_policy",
+      "command": [
+        "C:\\Program Files\\LLVM\\bin\\clang.EXE",
+        "--target=riscv64-none-elf",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-O3",
+        "-fwrapv",
+        "-fno-strict-overflow",
+        "-S",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\security_impact_core.c",
+        "-o",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\results\\cross_arch\\riscv64_wrap_policy.s"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "functions": {
+        "fallocate_post_overflow_guard": {
+          "instruction_count": 11,
+          "conditional_or_select_count": 4,
+          "assembly": "fallocate_post_overflow_guard:          # @fallocate_post_overflow_guard\n# %bb.0:\n\tmv\ta3, a0\n\tli\ta0, -22\n\tbltz\ta3, .LBB0_4\n# %bb.1:\n\tblez\ta1, .LBB0_4\n# %bb.2:\n\tadd\ta0, a1, a3\n\tslt\ta1, a2, a0\n\tsrli\ta2, a0, 63\n\tor\ta1, a1, a2\n\tbeqz\ta1, .LBB0_4\n# %bb.3:\n\tli\ta0, -27\n.LBB0_4:\n\tret\n.Lfunc_end0:"
+        },
+        "allocation_post_multiply_guard": {
+          "instruction_count": 14,
+          "conditional_or_select_count": 5,
+          "assembly": "allocation_post_multiply_guard:         # @allocation_post_multiply_guard\n# %bb.0:\n\tmv\ta2, a0\n\tli\ta0, -22\n\tblez\ta2, .LBB1_5\n# %bb.1:\n\tblez\ta1, .LBB1_5\n# %bb.2:\n\tslli\ta1, a1, 32\n\tslli\ta2, a2, 32\n\tmulhu\ta1, a2, a1\n\tsext.w\ta0, a1\n\tbltz\ta0, .LBB1_4\n# %bb.3:\n\tsrli\ta1, a1, 32\n\tsnez\ta1, a1\n\tbeqz\ta1, .LBB1_5\n.LBB1_4:\n\tli\ta0, -75\n.LBB1_5:\n\tret\n.Lfunc_end1:"
+        },
+        "ext4_post_shift_guard": {
+          "instruction_count": 2,
+          "conditional_or_select_count": 0,
+          "assembly": "ext4_post_shift_guard:                  # @ext4_post_shift_guard\n# %bb.0:\n\tli\ta0, 0\n\tret\n.Lfunc_end2:"
+        },
+        "ext4_pre_shift_guard": {
+          "instruction_count": 3,
+          "conditional_or_select_count": 1,
+          "assembly": "ext4_pre_shift_guard:                   # @ext4_pre_shift_guard\n# %bb.0:\n\tsltiu\ta0, a0, 32\n\taddi\ta0, a0, -1\n\tret\n.Lfunc_end3:"
+        }
+      }
+    },
+    {
+      "architecture": "armv7",
+      "target": "armv7-none-eabi",
+      "policy": "default",
+      "command": [
+        "C:\\Program Files\\LLVM\\bin\\clang.EXE",
+        "--target=armv7-none-eabi",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-O3",
+        "-S",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\security_impact_core.c",
+        "-o",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\results\\cross_arch\\armv7_default.s"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "functions": {
+        "fallocate_post_overflow_guard": {
+          "instruction_count": 22,
+          "conditional_or_select_count": 8,
+          "assembly": "fallocate_post_overflow_guard:          @ @fallocate_post_overflow_guard\n\t.fnstart\n@ %bb.0:\n\t.save\t{r4, lr}\n\tpush\t{r4, lr}\n\tldr\tr4, [sp, #8]\n\tadds\tr0, r2, r0\n\tldr\tlr, [sp, #12]\n\tadc\tr12, r3, r1\n\tsubs\tr4, r4, r0\n\tsbcs\tr4, lr, r12\n\tmvnlt\tr12, #0\n\tmvnlt\tr0, #26\n\tcmp\tr1, #0\n\tmov\tr1, #0\n\tmovwmi\tr1, #1\n\tsubs\tr2, r2, #1\n\tmov\tr4, #0\n\tsbcs\tr2, r3, #0\n\tmovwlt\tr4, #1\n\torrs\tr1, r1, r4\n\tmvn\tr1, #26\n\taddne\tr0, r1, #5\n\tmvnne\tr12, #0\n\tmov\tr1, r12\n\tpop\t{r4, pc}\n.Lfunc_end0:"
+        },
+        "allocation_post_multiply_guard": {
+          "instruction_count": 7,
+          "conditional_or_select_count": 2,
+          "assembly": "allocation_post_multiply_guard:         @ @allocation_post_multiply_guard\n\t.fnstart\n@ %bb.0:\n\tmul\tr2, r1, r0\n\tcmp\tr1, #1\n\tmvnlt\tr2, #21\n\tcmp\tr0, #1\n\tmvnlt\tr2, #21\n\tmov\tr0, r2\n\tbx\tlr\n.Lfunc_end1:"
+        },
+        "ext4_post_shift_guard": {
+          "instruction_count": 2,
+          "conditional_or_select_count": 0,
+          "assembly": "ext4_post_shift_guard:                  @ @ext4_post_shift_guard\n\t.fnstart\n@ %bb.0:\n\tmov\tr0, #0\n\tbx\tlr\n.Lfunc_end2:"
+        },
+        "ext4_pre_shift_guard": {
+          "instruction_count": 5,
+          "conditional_or_select_count": 1,
+          "assembly": "ext4_pre_shift_guard:                   @ @ext4_pre_shift_guard\n\t.fnstart\n@ %bb.0:\n\tmov\tr1, #0\n\tcmp\tr0, #31\n\tmvnhi\tr1, #0\n\tmov\tr0, r1\n\tbx\tlr\n.Lfunc_end3:"
+        }
+      }
+    },
+    {
+      "architecture": "armv7",
+      "target": "armv7-none-eabi",
+      "policy": "wrap_policy",
+      "command": [
+        "C:\\Program Files\\LLVM\\bin\\clang.EXE",
+        "--target=armv7-none-eabi",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-O3",
+        "-fwrapv",
+        "-fno-strict-overflow",
+        "-S",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\security_impact_core.c",
+        "-o",
+        "C:\\Users\\lzy00\\Desktop\\2026\u535a\u58eb\u6bd5\u4e1a\\5.2026\u5bd2\u5047\u51b2\u523a\\2.\u7b2c\u4e8c\u7ae0\u3001FirmSem\\security_impact_bench\\results\\cross_arch\\armv7_wrap_policy.s"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "functions": {
+        "fallocate_post_overflow_guard": {
+          "instruction_count": 27,
+          "conditional_or_select_count": 8,
+          "assembly": "fallocate_post_overflow_guard:          @ @fallocate_post_overflow_guard\n\t.fnstart\n@ %bb.0:\n\t.save\t{r4, r5, r6, lr}\n\tpush\t{r4, r5, r6, lr}\n\tmov\tlr, r0\n\tmvn\tr4, #26\n\tadd\tr0, r4, #5\n\tmov\tr12, r1\n\tmvn\tr1, #0\n\tcmp\tr12, #0\n\tbmi\t.LBB0_3\n@ %bb.1:\n\tsubs\tr5, r2, #1\n\tsbcs\tr5, r3, #0\n\tblt\t.LBB0_3\n@ %bb.2:\n\tldr\tr5, [sp, #16]\n\tadds\tr2, r2, lr\n\tldr\tr6, [sp, #20]\n\tadc\tr3, r3, r12\n\tsubs\tr5, r5, r2\n\tmov\tr0, #0\n\tsbcs\tr6, r6, r3\n\tmov\tr6, #0\n\tmovwlt\tr6, #1\n\tcmp\tr3, #0\n\tmovwmi\tr0, #1\n\torrs\tr0, r6, r0\n\tmoveq\tr4, r2\n\tmoveq\tr1, r3\n\tmov\tr0, r4\n.LBB0_3:\n\tpop\t{r4, r5, r6, pc}\n.Lfunc_end0:"
+        },
+        "allocation_post_multiply_guard": {
+          "instruction_count": 15,
+          "conditional_or_select_count": 6,
+          "assembly": "allocation_post_multiply_guard:         @ @allocation_post_multiply_guard\n\t.fnstart\n@ %bb.0:\n\tmov\tr2, r0\n\tcmp\tr2, #1\n\tmvn\tr0, #21\n\tcmpge\tr1, #1\n\tbge\t.LBB1_2\n@ %bb.1:\n\tbx\tlr\n.LBB1_2:\n\tumull\tr0, r1, r2, r1\n\tcmp\tr1, #0\n\tmovwne\tr1, #1\n\tcmp\tr0, #0\n\tmvnmi\tr0, #74\n\tbxmi\tlr\n.LBB1_3:\n\tcmp\tr1, #0\n\tmvnne\tr0, #74\n\tbx\tlr\n.Lfunc_end1:"
+        },
+        "ext4_post_shift_guard": {
+          "instruction_count": 2,
+          "conditional_or_select_count": 0,
+          "assembly": "ext4_post_shift_guard:                  @ @ext4_post_shift_guard\n\t.fnstart\n@ %bb.0:\n\tmov\tr0, #0\n\tbx\tlr\n.Lfunc_end2:"
+        },
+        "ext4_pre_shift_guard": {
+          "instruction_count": 5,
+          "conditional_or_select_count": 1,
+          "assembly": "ext4_pre_shift_guard:                   @ @ext4_pre_shift_guard\n\t.fnstart\n@ %bb.0:\n\tmov\tr1, #0\n\tcmp\tr0, #31\n\tmvnhi\tr1, #0\n\tmov\tr0, r1\n\tbx\tlr\n.Lfunc_end3:"
+        }
+      }
+    }
+  ]
+}

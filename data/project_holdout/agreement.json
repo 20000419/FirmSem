@@ -1,0 +1,23 @@
+{
+  "rows": 100,
+  "agreements": 74,
+  "disagreements": 26,
+  "agreement_rate": 0.74,
+  "cohens_kappa_joint_label": 0.533715925394548,
+  "bootstrap_replicates": 10000,
+  "bootstrap_defined": 10000,
+  "ci_95": [
+    0.3717815681351278,
+    0.6819809463514759
+  ],
+  "a_marginals": {
+    "EXCLUDE_NON_SECURITY_OR_NON_RUNTIME": 45,
+    "ELIGIBLE:CHECK_PRESENT": 48,
+    "ELIGIBLE:CHECK_ELIMINATED": 7
+  },
+  "b_marginals": {
+    "EXCLUDE_NON_SECURITY_OR_NON_RUNTIME": 57,
+    "ELIGIBLE:CHECK_PRESENT": 38,
+    "ELIGIBLE:CHECK_ELIMINATED": 5
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "protocol_id": "firmsem_untouched_mechanism_holdout_v2_obligation_build_2plus1",
+  "built_before_any_model_evaluation": true,
+  "rows": 24,
+  "incident_clusters": 12,
+  "phase1": "two independent annotators label all 24 obligation-build rows",
+  "phase2": "row-level Cohen kappa with incident-cluster bootstrap",
+  "phase3": "third non-Phase-1 adjudicator resolves all substantive disagreements",
+  "sealed_until_finalize": [
+    "incident pairing",
+    "build role",
+    "compiler-policy flags",
+    "external oracle",
+    "FirmSem outputs"
+  ],
+  "annotation_source_policy": "source code tokens retained; external artifact comments/oracle hints removed",
+  "statistical_unit": "incident cluster; paired target rows are not independent samples",
+  "strata": {
+    "frozen_primary": 7,
+    "post_freeze_external_crosscheck": 5,
+    "report_separately": true
+  },
+  "validation": {
+    "rows": 24,
+    "incidents": 12,
+    "core_primary_incidents": 7,
+    "post_freeze_crosscheck_incidents": 5,
+    "prior_collision_counts": {
+      "normalized_source_sha256": 0,
+      "source_token_sha256": 0,
+      "normalized_assembly_sha256": 0,
+      "project_casefold": 0
+    },
+    "mechanism_counts": {
+      "library_contract_null_elision": 1,
+      "signed_overflow_predicate_elision": 2,
+      "pointer_arithmetic_null_elision": 1,
+      "data_race_termination_guard_elision": 1,
+      "pointer_offset_null_guard_elision": 1,
+      "signed_overflow_assert_elision": 1,
+      "strlen_oob_assumption_guard_elision": 1,
+      "post_dereference_null_guard_elision": 1,
+      "pointer_wraparound_guard_elision": 1,
+      "shift_range_guard_elision": 1,
+      "signed_multiply_overflow_guard_elision": 1
+    },
+    "guard_family_counts": {
+      "nonnull_preconditions": 4,
+      "overflow_checks": 3,
+      "concurrency_state_checks": 1,
+      "assert_preconditions": 1,
+      "bounds_checks": 2,
+      "range_and_bounds_preconditions": 1
+    }
+  },
+  "source_files": {
+    "real_world_eval\\results\\untouched_mechanism_holdout_v2\\paired_targets_sealed.json": "5db8e0a7227af2bd12e6a4abcdd87f64459fe6d92eea8081d51ed84146c71142",
+    "real_world_eval\\results\\untouched_mechanism_holdout_v2\\crosscheck_supplement_corrected_v2_sealed.json": "cea7fd1c05d20994adb2242efe2b23db19e4a66c0ca8f911b1177ba2edd0f4f6",
+    "real_world_eval\\results\\untouched_mechanism_holdout_v2\\exclusion_manifest.json": "39497761728fe070d23d4e7bff1aa3d965a8a29d503ea9671af40f3f5f19a6d4"
+  }
+}
