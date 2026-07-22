@@ -44,6 +44,7 @@ print(record.unguarded_arg_access)
 | `data/` | Curated development, project-holdout, mechanism-holdout, and security-impact records |
 | `docs/annotation_protocol.md` | Executed 2+1 annotation and adjudication protocol |
 | `docs/RESULTS.md` | Scope and frozen result summary |
+| `docs/REPRODUCIBILITY.md` | Complete-artifact experiment matrix and verified replay instructions |
 | `examples/security_impact/` | GCC/Clang security-impact replay source and frozen outputs |
 | `tests/` | Small public regression suite |
 
