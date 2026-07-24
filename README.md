@@ -1,14 +1,16 @@
 # FirmSem
 
-FirmSem provides a compact implementation and frozen public data for auditing
-whether an approved source-level security obligation still has an equivalent
-runtime enforcement mechanism in a compiler-optimized binary.
+FirmSem is a reference implementation and evidence archive for an empirical
+study of security-guard survival in release binaries. Given a source-backed
+security obligation selected before release, it records typed binary evidence
+and tests whether equivalent runtime enforcement survives the build.
 
-The public repository is intentionally small. It contains the reusable core,
-curated final data, the annotation protocol, and executable security-impact
-examples. Full raw transcripts, annotation returns, and regeneration logs are
-kept in the versioned archival artifact attached to the GitHub release and the
-Zenodo record.
+The repository intentionally separates reusable software from the larger
+frozen-evidence archive. The source tree contains the audit core, compact
+curated examples, the annotation protocol, and executable policy-replay
+examples. The versioned v2.0.0 archive contains the Route-B human-review
+records, frozen model responses, bounded mechanism evidence, result ledgers,
+and deterministic audit scripts.
 
 ## Install
 
@@ -44,7 +46,7 @@ print(record.unguarded_arg_access)
 | `data/` | Curated development, project-holdout, mechanism-holdout, and security-impact records |
 | `docs/annotation_protocol.md` | Executed 2+1 annotation and adjudication protocol |
 | `docs/RESULTS.md` | Scope and frozen result summary |
-| `docs/REPRODUCIBILITY.md` | Complete-artifact experiment matrix and verified replay instructions |
+| `docs/REPRODUCIBILITY.md` | v2.0.0 replay scope and explicit acquisition boundary |
 | `examples/security_impact/` | GCC/Clang security-impact replay source and frozen outputs |
 | `tests/` | Small public regression suite |
 
@@ -57,12 +59,16 @@ and security consequence rather than treating them as interchangeable claims.
 
 ## Archival release
 
-- GitHub release: <https://github.com/20000419/FirmSem/releases/tag/v1.0.0>
+- GitHub release: <https://github.com/20000419/FirmSem/releases/tag/v2.0.0>
 - Version DOI: <https://doi.org/10.5281/zenodo.21485535>
 
-The archival ZIP contains the complete frozen evidence needed to audit reported
-numbers. It intentionally excludes manuscript drafts, internal peer-review
-workflows, and private working notes.
+The v2.0.0 ZIP is a compact frozen-evidence and audit package. It verifies
+archive integrity, exercises the reusable code, and deterministically
+recomputes selected derived analyses from frozen records. It deliberately
+excludes multi-gigabyte source checkouts, compiler build trees, and raw
+intermediate traces, so it is not a self-contained replay of every acquisition
+stage. The exclusion ledger and exact reproduction boundary are included in
+the archive.
 
 ## License
 

@@ -1,12 +1,12 @@
 {
-  "title": "FirmSem: Auditing Security-Guard Survival in Compiler-Optimized Release Binaries",
+  "title": "FirmSem: An Empirical Study of Security-Guard Survival in Release Binaries",
   "upload_type": "software",
-  "publication_date": "2026-07-22",
-  "version": "1.0.0",
+  "publication_date": "2026-07-24",
+  "version": "2.0.0",
   "language": "eng",
   "access_right": "open",
   "license": "Apache-2.0",
-  "description": "Reproducibility artifact for obligation-conditioned verification of security-guard survival in compiler-optimized release binaries. It includes GuardIR, independently adjudicated benchmarks, deterministic and learned baselines, frozen semantic-model transcripts, and executable GCC/Clang security replays.",
+  "description": "Compact frozen-evidence and audit artifact for an empirical study of selected security-guard survival in release binaries. It includes GuardIR, independently adjudicated non-IID strata, deterministic and learned controls, frozen semantic-model transcripts, bounded mechanism-attribution evidence, and executable GCC/Clang policy replays. Multi-gigabyte compiler acquisition and build intermediates are deliberately excluded and documented.",
   "creators": [
     {"name": "Liu, Zhenyu", "affiliation": "Information Engineering University"},
     {"name": "Chen, Zhifeng", "affiliation": "Information Engineering University"},
